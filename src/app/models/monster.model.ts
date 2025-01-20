@@ -15,9 +15,9 @@ export class Monster {
               attackDescription?:string
        )
        {
-              this.name="pikachu";
+              this.name="pikachu 1";
               this.hp=10 ;
-              this.figureCaption="Geo Impact";
+              this.figureCaption="N°001 Monster";
               this.attackName="Eclaire";
               this.attackStrengh=60;
               this.attackDescription="This is a long description...";

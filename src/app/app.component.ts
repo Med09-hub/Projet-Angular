@@ -22,5 +22,6 @@ export class AppComponent {
   this.monster1.attackName="Eclaire";
   this.monster1.attackStrengh=98;
   this.monster1.attackDescription="Pikachu est l'un des pokemons de la famille electrique";
+
  }
 }
