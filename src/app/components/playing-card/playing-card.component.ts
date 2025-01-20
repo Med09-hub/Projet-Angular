@@ -8,5 +8,11 @@ import { Component, Input } from '@angular/core';
   styleUrl: './playing-card.component.scss'
 })
 export class PlayingCardComponent {
-  @Input() monster:Monster=new Monster();
+  @Input ({
+    alias:'my monster' ,
+    transform: (value: Monster) => {
+      value.hp =value.hp / 2 ;
+      return value ;
+    }
+  }) monster:Monster=new Monster();
 }
