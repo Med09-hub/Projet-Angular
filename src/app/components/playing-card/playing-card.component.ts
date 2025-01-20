@@ -9,7 +9,7 @@ import { Component, Input } from '@angular/core';
 })
 export class PlayingCardComponent {
   @Input ({
-    alias:'my monster' ,
+    alias:'my-monster' ,
     transform: (value: Monster) => {
       value.hp =value.hp / 2 ;
       return value ;
