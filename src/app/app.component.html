@@ -1,2 +1,7 @@
-<app-search-bar (searchButtonClicked)=" increaseCount()" />
+<app-search-bar 
+(submit)=" increaseCount()" 
+[search]="search"
+(searchChange) ="search=$event"
+/>
+Search: {{search}} <br />
 Click count:{{count}}
