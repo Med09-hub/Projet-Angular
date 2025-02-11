@@ -1,25 +1,13 @@
-export class Monster {
-       name:string;
-       hp:number;
-       figureCaption:string;
-       attackName:string;
-       attackStrengh:number;
-       attackDescription:string;
+import { MonsterType } from "../utils/monster.utils";
 
-       constructor (
-              name?:string,
-              hp?:number,
-              figureCaption?:string,
-              attackName?:string,
-              attackStrengh?:number,
-              attackDescription?:string
-       )
-       {
-              this.name="pikachu 1";
-              this.hp=10 ;
-              this.figureCaption="N°001 Monster";
-              this.attackName="Eclaire";
-              this.attackStrengh=60;
-              this.attackDescription="This is a long description...";
-       }       
+export class Monster {
+       
+	name: string = "Monster";
+	type: MonsterType = MonsterType.electric;
+ 	image: string = "assets/pikachu01.jpg";
+ 	hp: number = 60;
+ 	figureCaption: string = "N°001 Monster";
+ 	attackName: string = "Standard Attack";
+	attackStrength: number = 10;
+	attackDescription: string = "This is an attack description..."
 }
