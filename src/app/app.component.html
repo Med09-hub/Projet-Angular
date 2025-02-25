@@ -1,32 +1,18 @@
-<app-search-bar 
-(submit)=" increaseCount()" 
-[search]="search"
-(searchChange) ="search=$event"
-/>
+<app-search-bar (submit)=" increaseCount()" [search]="search" (searchChange)="search=$event" [(search)]="search1" />
 Search: {{search}} <br />
 Click count:{{count}}
 <br><br><br>
-<button style=" background-color: #04AA6D;
-cursor: pointer;
-border: none;
-color: white;
-padding: 10px 15px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-font-size: 16px;"
- (click)="toggleMonster()">Next Pokemon</button>---
 
- <button style=" background-color: #04AA6D;
-cursor: pointer;
-border: none;
-color: white;
-padding: 10px 15px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-font-size: 16px;"
- (click)="previousMonster()">Previous Pokemon</button>
+
+
+
+
 <div id="card-list">
-    <app-playing-card [monster]="monsters[selectedMonsterIndex]"/>
-    </div>
+    <app-playing-card  *ngFor="let i of filteredMonsters()" [monster]="i"/>
+</div>
+@if (filteredMonsters().length == 0) {
+    <div class="centered">No monsters found !</div>
+} @else {
+    <div class="centered">Found {{filteredMonsters().length}} monsters</div>
+}
+<div class="centered"><button (click)="addMonster()">Add Monster</button>/button></div> <br/><br/>

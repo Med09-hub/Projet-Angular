@@ -1,4 +1,4 @@
-<div id ="card">
+<div id="card">
     <div id="inside" [style.background-color]="backgroudColor">
         <header>
             <div class="left">
@@ -6,7 +6,7 @@
             </div>
             <div class="right">
                 <div id="hp">{{monster.hp}}</div>
-            <img class="energy icon" [src]="MonsterTypeIcon">
+                <img class="energy icon" [src]="MonsterTypeIcon">
             </div>
         </header>
         <figure id="art">
@@ -16,12 +16,12 @@
         <div id="capacities">
             <div class="capacity">
                 <div class="main">
-              <div class="cost">
-                <img class="icon energy" [src]="MonsterTypeIcon">
-                <img class="icon energy" [src]="MonsterTypeIcon" >
-              </div>
-              <div class="name">{{monster.attackName}}</div>
-              <div class="damage"> {{monster.attackStrength}}</div>
+                    <div class="cost">
+                        <img class="icon energy" [src]="MonsterTypeIcon">
+                        <img class="icon energy" [src]="MonsterTypeIcon">
+                    </div>
+                    <div class="name">{{monster.attackName}}</div>
+                    <div class="damage"> {{monster.attackStrength}}</div>
                 </div>
             </div>
             <div class="description">{{monster.attackDescription}}</div>
